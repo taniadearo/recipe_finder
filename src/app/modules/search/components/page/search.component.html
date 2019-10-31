@@ -1,0 +1,28 @@
+<div class="page-wrapper" [ngClass]="{'has-result': result && result.length}">
+  <div class="container">
+    <div class="header">
+      <h2>Recipe Finder</h2>
+      <form class="form my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2 search"
+          [(ngModel)]="keyword"
+          name="keyword"
+          (input)="searchFor()"
+          type="search"
+          placeholder="Which recipe you want to find..."
+          aria-label="Search"
+          autocomplete="off"
+        >
+      </form>
+      <div class="result-container">
+        <ul *ngIf="!isLoading && (result && result.length)">
+          <li *ngFor="let item of result">
+            <app-recipe-card [item]="item"></app-recipe-card>
+          </li>
+        </ul>
+        <app-no-result *ngIf="!isLoading && (result && !result.length)"></app-no-result>
+        <app-loading *ngIf="isLoading"></app-loading>
+      </div>
+    </div>
+  </div>
+</div>

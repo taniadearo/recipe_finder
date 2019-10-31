@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-12 col-sm-2 pl-sm-0">
+    <div *ngIf="item.thumbnail" class="img-container" [ngStyle]="{'background-image': 'url(' + item.thumbnail + ')'}"></div>
+    <div *ngIf="!item.thumbnail" class="img-container" [ngStyle]="{'background-image': 'url(./assets/images/no-image-icon.png)','opacity': '.2', 'background-size': 'contain', 'background-position': 'center' }"></div>
+  </div>
+  <div class="col-12 col-sm-10">
+    <h3>{{ item.title }}</h3>
+    <a target="blank" [href]="item.href">{{ item.href }}</a>
+    <p><b>Ingredients: </b>{{ item.ingredients}}</p>
+  </div>
+</div>
