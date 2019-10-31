@@ -4,7 +4,7 @@ Simple search page that uses an API to search for recipes.
 
 ## Demo
 
-Desktop version: https://youtu.be/kLXKqLlDn5c 
+Desktop version: https://youtu.be/kLXKqLlDn5c <br>
 Mobile version: https://youtu.be/F45GDJji0qg
 
 ## Development server
